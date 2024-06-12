@@ -40,5 +40,10 @@ public class Mapp {
         {
             System.out.println(key + " " + studentGrades.get(key));
         }
+
+        for(Integer values: studentGrades.values())
+        {
+            System.out.println(values);
+        }
     }
 }
