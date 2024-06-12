@@ -5,11 +5,12 @@ public class Sett {
     {
         //Declaring the Set
         Set<String> guestList = new HashSet<>();
+        // Set<String> guestList = new LinkedHashSet<>(); // 
 
         //Adding the GuestList to the Set.
         guestList.add("Gopal");
-        guestList.add("Suresh");
         guestList.add("Ramesh");
+        guestList.add("Suresh");
 
         //Adding Duplicate Elements
         guestList.add("Suresh");
