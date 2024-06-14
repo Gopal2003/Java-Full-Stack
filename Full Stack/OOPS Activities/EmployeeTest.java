@@ -52,7 +52,8 @@ public class EmployeeTest {
     void salaryRaise()
     {
         //10% Increment in the Salary.
-        double raise = (monthlySalary / 10);
+
+        double raise = (monthlySalary) / 10;
         monthlySalary = monthlySalary + raise;
         System.out.println("The Raise in Salary is: " + raise);
     }
