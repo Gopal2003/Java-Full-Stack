@@ -12,7 +12,12 @@ public class Program3 {
         Collections.addAll(products,prods);
         
         //Using Lambda Expression to Iterate through a List using .forEach() Method
-
         products.forEach(items -> System.out.println("Products: " + items));
+
+        //Normal Method
+        for(String items : products)
+        {
+            System.out.println(items);
+        }
      }
 }
