@@ -24,9 +24,6 @@ public class Program7 {
         */
     
         //Printing All Elements.
-    
-        // result.stream().forEach(System.out::println);
-    
         result.stream().forEach(System.out::println);
     }
     
