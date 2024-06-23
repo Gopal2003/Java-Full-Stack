@@ -10,7 +10,7 @@ public class PeekExample {
         //Processing the list with peek.
 
         List<Integer> processNumbers = numbers.stream()
-        .peek(n -> System.out.println("Original " + n)) // Main purpose : Used for Debugging.
+        .peek(n -> System.out.println("Original " + n)) // Main purpose : Used for Debugging and also for intermediate opertions.
         .filter((n -> n % 2 == 0))
         .peek(n -> System.out.println("After Filter " + n))
         .map(n -> n * 2)
