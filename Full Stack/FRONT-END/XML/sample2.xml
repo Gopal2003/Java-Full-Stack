@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- This xml document describes a product ORDER -->
+
+
+<Order>
+    <Customer>
+        <Name>John Doe</Name>
+        <Email>Alice.smit@example.com</Email>
+    </Customer>
+
+    <Items>
+        <Item>
+            <Name>Coffee Machine</Name>
+            <Price>49.99</Price>
+            <Quantity>1</Quantity>
+        </Item>
+        <Item>
+            <Name>Cofee Mug</Name>
+            <Price>11.88</Price>
+            <Quantity>1</Quantity>
+        </Item>
+        <Item>
+            <Name>Cofee Beans</Name>
+            <Price>9.99</Price>
+            <Quantity>2</Quantity>
+        </Item>
+    </Items>
+</Order>

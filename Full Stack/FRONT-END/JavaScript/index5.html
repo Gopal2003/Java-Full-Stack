@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //This program Explains Working with JavaScript objects.
+
+        let address = {
+            'building no' : 4032,
+            street : 'North 1st Street',
+            state : 'CA',
+            country : 'USA'
+        }
+
+        //Accessing Properties of Object
+        console.log(address['building no']);
+
+        //for properties without space we can access them using dot operator.
+        console.log(address.street);
+
+        //modifying property of object
+        console.log(address.state);
+        address.state = 'NY';
+        console.log(address.state);
+
+        //Adding a New Property
+        address.zipcode = 10001;
+        console.log(address);
+
+        //checking presence of property
+        console.log('zipcode' in address);
+        console.log('language' in address);
+    </script>
+</body>
+</html>

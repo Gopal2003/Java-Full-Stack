@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //This program explains functions in JavaScript.
+        //Function is a block of code that can be called by its name. It can be reused as many times as we want.
+
+        //Calling function = yes, you can call function before declaring it.
+        greet();
+
+        //What javascript engine does it physically places the function definition before the function call.
+        //This is technically called Hoisting.
+
+        function greet(){
+            console.log("Hello World");
+        }
+
+        //another example
+
+        function compare(a,b)
+        {
+            return a > b;
+        }
+
+        console.log(compare(10,20));
+        console.log(compare(20,10));
+
+        //Another example of Hoisting
+        console.log(c);
+
+        var c = 10;
+
+        
+        // //Uncomment for testing
+
+        // console.log(a);
+
+        // let a;
+        
+
+    </script>
+</body>
+</html>

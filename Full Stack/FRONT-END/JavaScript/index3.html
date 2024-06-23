@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a variable is uninitialized gives reference error
+        let message;
+        console.log(message);
+        //const is keyword used to define constant variable.
+        const pi = 3.14;
+        console.log(pi);
+        // pi = 3.14159; //uncomment it for testing.
+
+        //DataType in JavaScript
+        let counter=100;
+        console.log(counter + " " + typeof(counter));
+        counter = true;
+        console.log(counter + " " + typeof(counter));
+        counter = "Hello World!";
+        console.log(counter + " " + typeof(counter));
+        counter = 3463246256n;
+        console.log(counter + " " + typeof(counter));
+        counter = {};
+        counter = {name: "John Doe", age: 25};
+        console.log(counter.name);
+        console.log(counter + " " + typeof(counter));
+    </script>
+</body>
+</html>

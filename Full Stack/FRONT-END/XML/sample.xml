@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- This xml document describes product information -->
+
+<Product>
+    <Id>101</Id>
+    <Name> Toy Train</Name>
+    <Price> 860 </Price>
+    <Description> Toy train for kids</Description>
+</Product>

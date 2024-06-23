@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //This Program Explains Working With Arrays in JavaScript.
+        
+        //Creating an Empty Array
+        let emptyArr = new Array();
+        console.log(emptyArr);
+
+        //Creating an Array of length 10.
+        let Arr = new Array(10);
+        console.log(Arr);
+
+        //Creating an Array with PreSet Values.
+        let Arr1 = new Array(10,9,8,7,6);
+        console.log(Arr1);
+
+        //Alternative Method to Create Array
+        let colors = ['Red', 'Green', 'Blue', 'Yellow', 'Pink'];
+
+        //empty Array
+        let emptyArr1 = [];
+
+        //Accessing Elements of Array
+        console.log(colors);
+        console.log(colors[0], colors[1], colors[2]);
+
+        //Adding Elements in Array using .push() method
+        colors.push("Purple"); // colors.push('purple'); is also valid
+        console.log(colors);
+
+        //Adding Elements at the beginning of Array using .unshift() method
+        colors.unshift("Black");
+        console.log(colors);
+
+        //Removing Elements from the end of Array using .pop() method
+        console.log(colors.pop());
+        console.log(colors);
+
+        //Removing Elements from the beginning of Array using .shift() method
+        console.log(colors.shift());
+        console.log(colors);
+
+        //check if a variable is an Array
+        console.log(Array.isArray(colors));
+        console.log(Array.isArray('text'));
+        console.log(Array.isArray(colors[0]));
+
+    </script>
+</body>
+</html>

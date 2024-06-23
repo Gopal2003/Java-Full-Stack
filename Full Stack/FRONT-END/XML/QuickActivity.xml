@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- This xml document describes a quick activity  to create the representaion of catalog of books in a library-->
+
+<Library>
+    <Book Id="1">
+        <Title>Java Programming</Title>
+        <Author>John Doe</Author>
+        <genre>Programming</genre>
+        <Published>1995</Published>
+    </Book>
+    <Book Id="2">
+        <Title>Python Programming</Title>
+        <Author>John Cena</Author>
+        <genre>Programming</genre>
+        <Published>2000</Published>
+    </Book>
+   <Book Id="3">
+        <Title> C++ Programming</Title>
+        <Author>Mark Henrick</Author>
+        <genre>Programming</genre>
+        <Published>2001</Published>
+    </Book>
+    <Book Id="4">
+        <Title> C Programming</Title>
+        <Author>Bob</Author>
+        <genre>Programming</genre>
+        <Published>2002</Published>
+    </Book>
+    <Book Id="5">
+        <Title>JavaScript</Title>
+        <Author>Alice</Author>
+        <genre>Programming</genre>
+        <Published>2003</Published>
+    </Book>
+</Library>
