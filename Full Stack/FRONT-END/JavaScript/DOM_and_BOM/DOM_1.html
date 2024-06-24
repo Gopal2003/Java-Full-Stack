@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- purpose of head - it is used to write code that doesn't contribute to UI of the Page. eg. business logic or  -->
+     <!-- it is used to  -->
+<head>
+    <script>
+        //Define a Method 
+
+        function clickHandler(){
+            document.getElementById("mydiv").innerHTML = "<p> Hello </p>";
+        }
+    </script>
+</head>
+<body>
+    
+    <h2> Handling JavaScript Events </h2>
+    <hr/>
+
+<!--  event: click, eventHandler="onclick" -->
+    <!-- <input type="button" value="Click Me!" onclick="alert('Och! Did u click Button!');" />   -->
+    <input type="button" value="Click Me!" onclick="clickHandler()" />  
+
+    <div id="mydiv">
+        This is sample DIV
+    </div>
+</body>
+</html>

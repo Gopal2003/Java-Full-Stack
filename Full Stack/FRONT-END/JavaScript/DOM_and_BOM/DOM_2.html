@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    
+    <h3> JavaScript Validation (Important)</h3>
+    <hr/>
+
+    <form id="myForm" onsubmit="return validateFrom()">
+            <label for="nametxt"> Name : </label>
+            <input type="text" id="nametxt" name="nametxt"/>
+            <span id="nameError" class="error"></span>
+
+            <br/><br/>
+            
+            <label for="emailtxt"> Email: </label>
+            <input type="text" id="emailtxt" name="emailtxt"/>
+            <span id="emailError" class="error"></span>
+            <br/><br/><br/>
+            <!-- Both will perform the same operation because they are in form tag and hence, both will act as submit button regardless of type="submit mentioned or not." -->
+            <input type="submit">
+            <!-- <button>submit</button> -->
+
+    </form> 
+
+    <script>
+        function validateFrom()
+        {
+            //We will fetch the value of the textfield
+            var nameValue = document.getElementById("nametxt").value;
+            console.log(nameValue);
+            var nameErrorSpan = document.getElementById("nameError");
+            // console.log(nameErrorSpan);
+
+            //here is a Tracker variable if validation is OK
+            var isValid = true;
+
+            if(!nameValue)
+            {
+                nameErrorSpan.textContent = "name Required! ";
+                isValid = false;
+            }
+            //We will fetch the value of the textfield
+            var emailValue = document.getElementById("emailtxt").value;
+            console.log(nameValue);
+            var emailErrorSpan = document.getElementById("emailError");
+            // console.log(nameErrorSpan);
+
+            //here is a Tracker variable if validation is OK
+            var isValid = true;
+
+            if(!nameValue)
+            {
+                nameErrorSpan.textContent = "name Required! ";
+                isValid = false;
+            }
+            if(!emailValue)
+            {
+                emailErrorSpan.textContent = "Email Required";
+                isValid= false;
+            }
+            
+            return isValid;
+        }
+    </script>
+</body>
+</html>
