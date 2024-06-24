@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+      }
+
+      #mainbox {
+        height: 50%;
+        width: 50%;
+        /* background-color: red; */
+        border: 2px solid black;
+        transform: translate(50%, 50%);
+        position: relative;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+      }
+
+      #left {
+        height: 50%;
+        width: 35%;
+        background-color: yellow;
+        margin: 80px;
+      }
+
+      #left h2 {
+        text-align: center;
+        padding: 50px 0 0 13px;
+        font-size: 25px;
+      }
+
+      #right {
+        text-align: center;
+        height: 40%;
+        width: 30%;
+        /* background-color: cornflowerblue; */
+        margin-left: 40px;
+        border: 2px solid black;
+      }
+
+      #displayBox {
+        height: 30px;
+        width: 45px;
+        /* background-color: red; */
+        border: 2px solid black;
+      }
+
+      #box {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 20px 0 0 50px;
+      }
+
+      #box button {
+        padding: 5px;
+        background-color: rgb(237, 178, 100);
+      }
+
+      #box input {
+        width: 40px;
+        height: 30px;
+      }
+      #right h5 {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainbox">
+      <div id="left">
+        <h2>Guess The number Game</h2>
+      </div>
+      <div id="right">
+        <h5>Guess a Number From 1 to 20</h5>
+        <h5 id="resultStatement"></h5>
+        <div id="box">
+          <input type="text" id="input" onclick="validateNumber()" />
+          <button id="check">Click</button>
+        </div>
+        <h5 id="chanceStatement"></h5>
+      </div>
+    </div>
+
+    <script>
+      var actualValue = Math.floor(Math.random() * 20) + 1;
+      var resultStatement = document.getElementById("resultStatement");
+      resultStatement.textContent = "Guess The Number";
+
+      var chanceStatement = document.getElementById("chanceStatement");
+      chanceStatement.textContent = "You Have 5 Chances left";
+
+      var check = document.getElementById("check").value;
+      console.log(check);
+
+      var count = 5;
+      function validateNumber() {
+        var input = document.getElementById("input");
+        var guessedValue = parseInt(input.value);
+
+        console.log(guessedValue);
+
+        if (guessedValue == actualValue) {
+          resultStatement.textContent = "You Guessed it Right! 👌💥";
+        } else if (guessedValue > actualValue) {
+          resultStatement.textContent = "Value is Too High! 😒";
+        } else if (guessedValue < actualValue) {
+          resultStatement.textContent = "Value is Too Small! 😢";
+        }
+
+        count--;
+
+        if (count == 1) {
+          chanceStatement.textContent = `You have ${count} Chance Remaining`;
+        } else {
+          chanceStatement.textContent = `You have ${count} Chances Remaining`;
+        }
+      }
+
+      if (count == 0) {
+        resultStatement.textContent = `The Number was ${actualValue}🥲`;
+      }
+    </script>
+  </body>
+</html>
+
+
+<!-- Solution: https://drive.google.com/file/d/1c9bYz1Wt6Y-8pELsPNx-yAPlPWi7xgRj/view?pli=1 -->

@@ -1,69 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-</head>
-<body>
-    
-    <h3> JavaScript Validation (Important)</h3>
-    <hr/>
+  <head> </head>
+  <body>
+    <h3>JavaScript Validation (Important)</h3>
+    <hr />
 
     <form id="myForm" onsubmit="return validateFrom()">
-            <label for="nametxt"> Name : </label>
-            <input type="text" id="nametxt" name="nametxt"/>
-            <span id="nameError" class="error"></span>
+      <label for="nametxt"> Name : </label>
+      <input type="text" id="nametxt" name="nametxt" />
+      <span id="nameError" class="error"></span>
 
-            <br/><br/>
-            
-            <label for="emailtxt"> Email: </label>
-            <input type="text" id="emailtxt" name="emailtxt"/>
-            <span id="emailError" class="error"></span>
-            <br/><br/><br/>
-            <!-- Both will perform the same operation because they are in form tag and hence, both will act as submit button regardless of type="submit mentioned or not." -->
-            <input type="submit">
-            <!-- <button>submit</button> -->
+      <br /><br />
 
-    </form> 
+      <label for="emailtxt"> Email: </label>
+      <input type="text" id="emailtxt" name="emailtxt" />
+      <span id="emailError" class="error"></span>
+      <br /><br /><br />
+
+      <label for="agetxt"> Age: </label>
+      <input type="text" id="agetxt" name="agetxt" />
+      <span id="ageError" class="error"></span>
+      <br /><br /><br />
+
+      <label for="checktxt"> check: </label>
+      <input type="checkbox" id="agreecheckbox" name="checktxt" />
+      <span id="checkError" class="error"></span>
+      <br /><br /><br />
+      <!-- Both will perform the same operation because they are in form tag and hence, both will act as submit button regardless of type="submit mentioned or not." -->
+      <input type="submit" />
+      <!-- <button>submit</button> -->
+    </form>
 
     <script>
-        function validateFrom()
-        {
-            //We will fetch the value of the textfield
-            var nameValue = document.getElementById("nametxt").value;
-            console.log(nameValue);
-            var nameErrorSpan = document.getElementById("nameError");
-            // console.log(nameErrorSpan);
+      function validateFrom() {
+        //We will fetch the value of the textfield
+        var nameValue = document.getElementById("nametxt").value;
+        console.log(nameValue);
+        var nameErrorSpan = document.getElementById("nameError");
+        // console.log(nameErrorSpan);
 
-            //here is a Tracker variable if validation is OK
-            var isValid = true;
+        //here is a Tracker variable if validation is OK
+        var isValid = true;
 
-            if(!nameValue)
-            {
-                nameErrorSpan.textContent = "name Required! ";
-                isValid = false;
-            }
-            //We will fetch the value of the textfield
-            var emailValue = document.getElementById("emailtxt").value;
-            console.log(nameValue);
-            var emailErrorSpan = document.getElementById("emailError");
-            // console.log(nameErrorSpan);
+        nameErrorSpan.textContent = "";
+        emailErrorSpan.textContent = "";
+        ageErrorSpan.textContent = "";
 
-            //here is a Tracker variable if validation is OK
-            var isValid = true;
-
-            if(!nameValue)
-            {
-                nameErrorSpan.textContent = "name Required! ";
-                isValid = false;
-            }
-            if(!emailValue)
-            {
-                emailErrorSpan.textContent = "Email Required";
-                isValid= false;
-            }
-            
-            return isValid;
+        if (!nameValue) {
+          nameErrorSpan.textContent = "name Required! ";
+          isValid = false;
         }
+
+        var emailValue = document.getElementById("emailtxt").value;
+        var emailErrorSpan = document.getElementById("emailError");
+
+        if (!emailValue) {
+          emailErrorSpan.textContent = "Email Required!";
+          isValid = false;
+        } else if (
+          !/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(emailValue)
+        ) {
+          emailErrorSpan.textContent = "Invalid Email";
+          isValid = false;
+        }
+
+        var ageValue = document.getElementById("agetxt").value;
+        var ageErrorSpan = document.getElementById("ageError");
+
+        if (!ageValue) {
+          ageErrorSpan.textContent = "age Required";
+          isValid = false;
+        } else if (ageValue <= 0) {
+          ageErrorSpan.textContent = "Invalid Age";
+          isValid = false;
+        }
+        
+        var agreeValue = document.getElementById("agreecheckbox").checked;
+        var checkErrorSpan = document.getElementById("checkError");
+        if(!agreeValue)
+        {
+            checkErrorSpan.textContent =  "Check is Required";
+            isValid = false;
+        }
+
+
+        return isValid;
+      }
     </script>
-</body>
+  </body>
 </html>
