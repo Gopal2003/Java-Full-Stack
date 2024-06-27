@@ -19,4 +19,54 @@
     <servlet-name>MyServlet</servlet-name>
     <url-pattern>/MyServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DashBoard</display-name>
+    <servlet-name>DashBoard</servlet-name>
+    <servlet-class>DashBoard</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DashBoard</servlet-name>
+    <url-pattern>/DashBoard</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>createCoolie</display-name>
+    <servlet-name>createCoolie</servlet-name>
+    <servlet-class>createCoolie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>createCoolie</servlet-name>
+    <url-pattern>/createCoolie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>viewCookie</display-name>
+    <servlet-name>viewCookie</servlet-name>
+    <servlet-class>viewCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewCookie</servlet-name>
+    <url-pattern>/viewCookie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>cookieCreate</display-name>
+    <servlet-name>cookieCreate</servlet-name>
+    <servlet-class>cookieCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cookieCreate</servlet-name>
+    <url-pattern>/cookieCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QuickActivity</display-name>
+    <servlet-name>QuickActivity</servlet-name>
+    <servlet-class>QuickActivity</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuickActivity</servlet-name>
+    <url-pattern>/QuickActivity</url-pattern>
+  </servlet-mapping>
 </web-app>

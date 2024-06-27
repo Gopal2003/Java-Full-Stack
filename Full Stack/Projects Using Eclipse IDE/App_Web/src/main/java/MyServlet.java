@@ -1,5 +1,6 @@
 
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -43,15 +44,41 @@ public class MyServlet extends HttpServlet {
 		String username = request.getParameter("txtusername");
 		String passString = request.getParameter("txtpassword");
 		
+//		String principalAmount = request.getParameter("PAmount");
+//		String TaxPer = request.getParameter("TaxPer");
+//		int Tax = Integer.parseInt(TaxPer);
+//		System.out.println(Tax);
+//		int Amount = Integer.parseInt(principalAmount);
+//		System.out.println(Amount);
+		
+		
 		//Checking the Credentials Match.
 		if(username.equals("admin") && passString.equals("secret@123"))
 		{
-			out.write("<h3> Welcome Admin ! </h3>");
+			//This is not an efficient way.
+			RequestDispatcher rd = request.getRequestDispatcher("DashBoard"); // Forwards the data to the dashboard.
+			rd.forward(request, response);
+//			out.write("<h3> Welcome Admin ! </h3>");
+//			response.sendRedirect("DashBoard");
 		}
 		else
 		{
 			out.write("<h3> Wrong Credentials </h3>");
+			response.sendRedirect("Error.html");
 		}
+		
+		
+		/*
+		double per = (double)Tax / 100;
+		double taxValue = (double)(Amount * per);
+		double totalPayable = Amount + taxValue;
+		
+		
+		out.write("<h5>Amount: </h5>" + Amount);
+		out.write("<h5>Tax Percentage: </h5>" + TaxPer);
+		out.write("<h5>Tax Value: </h5>" + taxValue);
+		out.write("<h5> Total Payable: </h5>" + totalPayable);
+		
 		
 		/*
 		String line = String.format("Thank you! %s your password is %s",username,passString);
