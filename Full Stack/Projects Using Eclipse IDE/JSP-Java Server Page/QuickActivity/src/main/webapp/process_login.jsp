@@ -34,7 +34,18 @@ logout or delete the session. --%>
 		<%
 			String usertype = request.getParameter("usertype");
 		
-			if(usertype.equals("student") )
+			if(!usertype.equals(null) && usertype.equals("student") || usertype.equals("guest"))
+			{
+				String targetPage = usertype + "_dashboard.jsp";
+				RequestDispatcher dispatcher = request.getRequestDispatcher(targetPage);
+				
+				dispatcher.forward(request,response);
+			}
+			else
+			{
+				RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+				
+			}
 		
 		%>
 </body>

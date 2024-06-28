@@ -11,14 +11,19 @@
 	
 	<%
 	
-	String data = request.getParameter("student");
+	String name = request.getParameter("txtusername");
+	String password = request.getParameter("txtpassword");
 	
-	session.setAttribute("sessionkey",data);
-	
-	out.println("Session Stored Successfully!");
-	
-	String sessionData = (String)session.getAttribute("sessionkey");
-	out.println("Hi " + sessionData + " !");
+	session.setAttribute("sessionkey",name);
 	%>
+	<%= "Session Stored Successfully!" %>
+	
+	<br/>
+	<%
+	out.println("Hi " + name + " !");
+	
+	%>
+	
+	
 </body>
 </html>
