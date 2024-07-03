@@ -10,7 +10,6 @@
 	<h2> Welcome to Student DashBoard</h2>
 	
 	<%
-	
 	String name = request.getParameter("txtusername");
 	String password = request.getParameter("txtpassword");
 	
