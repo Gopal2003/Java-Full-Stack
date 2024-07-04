@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>GstRegistration</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>AddGst</display-name>
+    <servlet-name>AddGst</servlet-name>
+    <servlet-class>AddGst</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddGst</servlet-name>
+    <url-pattern>/AddGst</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Gstcancellation</display-name>
+    <servlet-name>Gstcancellation</servlet-name>
+    <servlet-class>Gstcancellation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Gstcancellation</servlet-name>
+    <url-pattern>/Gstcancellation</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GstCancellation1</display-name>
+    <servlet-name>GstCancellation1</servlet-name>
+    <servlet-class>GstCancellation1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GstCancellation1</servlet-name>
+    <url-pattern>/GstCancellation1</url-pattern>
+  </servlet-mapping>
+</web-app>
