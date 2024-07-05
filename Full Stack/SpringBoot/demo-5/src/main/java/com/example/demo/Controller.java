@@ -71,4 +71,25 @@ public class Controller {
 			return "<h3> No Book Found🥲 </h3>";
 		}
 	}
+	
+	@GetMapping(value="/product/{id}" , produces="application/json")
+	public Product GetProductByID(@PathVariable int id)
+	{
+		if(id == 1)
+		{
+			return new Product(1,"iPhone","Apples and Selling Product - A SmartPhone");
+		}
+		else if(id == 2)
+		{
+			return new Product(2,"MacBook","All Purpose Laptop");
+		}
+		else if(id == 3)
+		{
+			return new Product(3,"airPods","Best in Class Audio Quality");
+		}
+		else
+		{
+			return null;
+		}
+	}
 }
