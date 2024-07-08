@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+
+#form> h2{
+	/*background-color: red;*/
+	padding: 10px;
+}
+
+#inputs h3{
+	padding: 10px;
+	color: blue;
+}
+
+#inputs select{
+	margin: 10px;
+}
+
+#form{
+	height: 80%;
+	width: 100%;
+	/*background-color: #8080ff;*/
+}
+
+#BusinessDetails{
+	display: flex;
+	gap: 10px;
+	/*background-color: #ff0000;*/
+	padding: 10px;
+}
+
+#BusinessDetails input{
+	width: 350px;
+}
+
+#ProprietorDetails input{
+	width: 350px;
+}
+#ProprietorDetails{
+	display: flex;
+	gap: 10px;
+	/*background-color: green;*/
+	padding: 10px;
+}
+
+#overflowELements{
+	display: flex;
+	gap: 10px;
+	/*background-color: #ff00ff;*/
+	padding: 10px;
+}
+
+#overflowELements input{
+	width: 350px;
+}
+
+#checkbox{
+	display:flex;
+	gap: 5px;
+	padding: 10px;
+}
+
+#BusinessDetail{
+	padding: 10px;	
+}	
+
+#BusinessDetail h3{
+	margin-left: -8px;
+}
+
+#inputs >p {
+	/*background-color: red;*/
+	padding: 10px;
+}
+
+#submit{
+	padding: 10px;
+	margin-left: 1360px;
+}
